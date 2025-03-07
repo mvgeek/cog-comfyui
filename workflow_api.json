@@ -1,0 +1,1012 @@
+{
+  "648": {
+    "inputs": {
+      "guide_size": 1024,
+      "guide_size_for": false,
+      "max_size": 1024,
+      "seed": [
+        "735",
+        0
+      ],
+      "steps": 10,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 0.35000000000000003,
+      "feather": 5,
+      "noise_mask": true,
+      "force_inpaint": false,
+      "bbox_threshold": 0.7000000000000001,
+      "bbox_dilation": 5,
+      "bbox_crop_factor": 1.5,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 0,
+      "sam_threshold": 0.75,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 0,
+      "tiled_encode": false,
+      "tiled_decode": false,
+      "image": [
+        "694",
+        0
+      ],
+      "positive": [
+        "725",
+        0
+      ],
+      "negative": [
+        "742",
+        0
+      ],
+      "bbox_detector": [
+        "649",
+        0
+      ],
+      "sam_model_opt": [
+        "650",
+        0
+      ],
+      "segm_detector_opt": [
+        "649",
+        1
+      ],
+      "model": [
+        "719",
+        0
+      ],
+      "clip": [
+        "680",
+        0
+      ],
+      "vae": [
+        "681",
+        0
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "Hands Detailer"
+    }
+  },
+  "649": {
+    "inputs": {
+      "model_name": "bbox/hand_yolov8s.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "Hands Detector"
+    }
+  },
+  "650": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "AUTO"
+    },
+    "class_type": "SAMLoader",
+    "_meta": {
+      "title": "SAMLoader (Impact)"
+    }
+  },
+  "651": {
+    "inputs": {
+      "guide_size": 1024,
+      "guide_size_for": false,
+      "max_size": 1024,
+      "seed": [
+        "735",
+        0
+      ],
+      "steps": 10,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 0.35000000000000003,
+      "feather": 5,
+      "noise_mask": true,
+      "force_inpaint": false,
+      "bbox_threshold": 0.7000000000000001,
+      "bbox_dilation": 5,
+      "bbox_crop_factor": 1.5,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 0,
+      "sam_threshold": 0.75,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 0,
+      "tiled_encode": false,
+      "tiled_decode": false,
+      "image": [
+        "648",
+        0
+      ],
+      "positive": [
+        "725",
+        0
+      ],
+      "negative": [
+        "742",
+        0
+      ],
+      "bbox_detector": [
+        "733",
+        0
+      ],
+      "sam_model_opt": [
+        "650",
+        0
+      ],
+      "segm_detector_opt": [
+        "733",
+        1
+      ],
+      "model": [
+        "719",
+        0
+      ],
+      "clip": [
+        "680",
+        0
+      ],
+      "vae": [
+        "681",
+        0
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "EyesDetailer"
+    }
+  },
+  "652": {
+    "inputs": {
+      "model_name": "bbox/face_yolov8m.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "Face Detector"
+    }
+  },
+  "653": {
+    "inputs": {
+      "guide_size": 1024,
+      "guide_size_for": false,
+      "max_size": 1024,
+      "seed": [
+        "735",
+        0
+      ],
+      "steps": 10,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 0.35000000000000003,
+      "feather": 5,
+      "noise_mask": true,
+      "force_inpaint": false,
+      "bbox_threshold": 0.7000000000000001,
+      "bbox_dilation": 5,
+      "bbox_crop_factor": 1.5,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 0,
+      "sam_threshold": 0,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 0,
+      "tiled_encode": false,
+      "tiled_decode": false,
+      "image": [
+        "651",
+        0
+      ],
+      "positive": [
+        "725",
+        0
+      ],
+      "negative": [
+        "742",
+        0
+      ],
+      "bbox_detector": [
+        "652",
+        0
+      ],
+      "sam_model_opt": [
+        "650",
+        0
+      ],
+      "model": [
+        "719",
+        0
+      ],
+      "clip": [
+        "680",
+        0
+      ],
+      "vae": [
+        "681",
+        0
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "HandsDetailer"
+    }
+  },
+  "654": {
+    "inputs": {
+      "lut_name": "Presetpro - Portra 800.cube",
+      "strength": 1,
+      "log": false,
+      "image": [
+        "653",
+        0
+      ]
+    },
+    "class_type": "ProPostApplyLUT",
+    "_meta": {
+      "title": "ProPostApplyLUT"
+    }
+  },
+  "662": {
+    "inputs": {
+      "text": "Love, at night on the beach, dancing, unity, happiness.",
+      "override_system_prompt": "You are an AI assistant tasked with creating text-to-image prompts based on given scenarios. Your goal is to generate highly descriptive prompts that align with the provided brand style guide. Here's how you should approach this task:\n\n1. Read the following brand style guide carefully. This will inform the visual style and elements you should incorporate into your prompts:\n\n<brand_style_guide>\nOverall:\n- Art direction feels aspirational whilst achievable\n- Use real people in everyday environments\n- Natural lighting\n- Feels welcoming and evokes the sensation of a new day\n- Always include purple props in the background\n\n\nTechnical Photography Guidelines:\n- Camera Setup:\n  - Prime lenses (35mm and 50mm) for consistency\n  - Shoot at f/2.8-f/4 for natural depth of field\n  - ISO range: 100-800 to maintain image quality\n  - Color temperature: 5200-5600K for natural warmth\n  - There's purple props in the background\n\nLighting Direction:\n- Primary light source: Natural window light or simulated window light\n- Fill light: Minimal, using reflectors for soft shadows\n- Key light positioned at 45° angle\n- Avoid harsh shadows or dramatic contrasts\n\nComposition & Framing:\n- Rule of thirds for subject placement\n- Leading lines to draw attention to the subject\n- Maintain consistent eye level for seated subjects\n\nPost-Processing:\n- Minimal color grading\n- Slight warming of highlights (+2-5)\n- Gentle contrast adjustment\n- Maintain natural skin tones\n- Consistent white balance across series\n\nEmotions:\n- Highlight a wide range of emotions\n- Confidence\n- Empowerment\n\nSituations:\n- Individuals\n- Real situations\n- Everyday personal environments\n- Communities\n- Diversity of the global community\n- Studio photography \n\nVisual compositions:\n- Heroic angles\n- Colors are rich but real\n- Natural lighting\n\nEquipment Requirements:\n- Full-frame camera bodies\n- Professional zoom lenses (24-70mm f/2.8)\n- LED continuous lighting systems\n\nShot List Essentials:\n- Wide establishing shots\n- Medium shots for context\n- Close-ups for emotional connection\n- Detail shots of meaningful interactions\n- Multiple variations of key poses\n</brand_style_guide>\n\n2. You will be provided with a scenario. Based on this scenario and the brand style guide, create a highly descriptive text-to-image prompt. Ensure that your prompt aligns with the overall aesthetic, technical guidelines, and emotional tone described in the brand style guide.\n\n3. Keep your prompt highly descriptive but limit it to a maximum of 300 words. Do not include line breaks in your prompt.\n\n4. Remember that the resulting image should always be composed using the rule of thirds.\n\n5. When you're ready to provide the prompt, write it inside <prompt> tags.\n\nHere is the scenario for which you need to create a text-to-image prompt:\n\n<scenario>\n{{SCENARIO}}\n</scenario>\n\nNow, based on this scenario and the brand style guide, please provide a text-to-image prompt:\n\n<prompt>"
+    },
+    "class_type": "JurdnsGroqAPIPromptEnhancer",
+    "_meta": {
+      "title": "Jurdn's Groq API Prompt Enhancer"
+    }
+  },
+  "680": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "681": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "682": {
+    "inputs": {
+      "value": 1.5
+    },
+    "class_type": "SimpleMathFloat+",
+    "_meta": {
+      "title": "Latent Upscale (range: 1,00-2,00)"
+    }
+  },
+  "683": {
+    "inputs": {
+      "resolution": "768x1280 (0.6)",
+      "batch_size": 1,
+      "width_override": 0,
+      "height_override": 0
+    },
+    "class_type": "SDXLEmptyLatentSizePicker+",
+    "_meta": {
+      "title": "Basic Image size"
+    }
+  },
+  "684": {
+    "inputs": {
+      "value": "max(min(a, 2), 1)",
+      "a": [
+        "682",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "Normalization"
+    }
+  },
+  "685": {
+    "inputs": {
+      "value_1": "a*c",
+      "value_2": "b*c",
+      "a": [
+        "683",
+        1
+      ],
+      "b": [
+        "683",
+        2
+      ],
+      "c": [
+        "684",
+        1
+      ]
+    },
+    "class_type": "SimpleMathDual+",
+    "_meta": {
+      "title": "Upscaled values"
+    }
+  },
+  "686": {
+    "inputs": {
+      "max_shift": 1.2,
+      "base_shift": 0.8,
+      "width": [
+        "683",
+        1
+      ],
+      "height": [
+        "683",
+        2
+      ],
+      "model": [
+        "721",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "ModelSamplingFlux"
+    }
+  },
+  "687": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "688": {
+    "inputs": {
+      "noise": [
+        "736",
+        0
+      ],
+      "guider": [
+        "689",
+        0
+      ],
+      "sampler": [
+        "687",
+        0
+      ],
+      "sigmas": [
+        "709",
+        0
+      ],
+      "latent_image": [
+        "683",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "689": {
+    "inputs": {
+      "model": [
+        "686",
+        0
+      ],
+      "conditioning": [
+        "713",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "690": {
+    "inputs": {
+      "max_shift": 1.1500000000000001,
+      "base_shift": 0.5,
+      "width": [
+        "683",
+        1
+      ],
+      "height": [
+        "683",
+        2
+      ],
+      "model": [
+        "721",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "ModelSamplingFlux"
+    }
+  },
+  "691": {
+    "inputs": {
+      "noise": [
+        "698",
+        0
+      ],
+      "guider": [
+        "699",
+        0
+      ],
+      "sampler": [
+        "687",
+        0
+      ],
+      "sigmas": [
+        "708",
+        0
+      ],
+      "latent_image": [
+        "697",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "Sampler 1"
+    }
+  },
+  "692": {
+    "inputs": {
+      "noise": [
+        "693",
+        0
+      ],
+      "guider": [
+        "699",
+        0
+      ],
+      "sampler": [
+        "687",
+        0
+      ],
+      "sigmas": [
+        "708",
+        1
+      ],
+      "latent_image": [
+        "702",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "Sampler 2"
+    }
+  },
+  "693": {
+    "inputs": {},
+    "class_type": "DisableNoise",
+    "_meta": {
+      "title": "DisableNoise"
+    }
+  },
+  "694": {
+    "inputs": {
+      "samples": [
+        "692",
+        1
+      ],
+      "vae": [
+        "681",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "695": {
+    "inputs": {
+      "samples": [
+        "688",
+        1
+      ],
+      "vae": [
+        "681",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "696": {
+    "inputs": {
+      "upscale_method": "bicubic",
+      "width": [
+        "685",
+        0
+      ],
+      "height": [
+        "685",
+        2
+      ],
+      "crop": "disabled",
+      "samples": [
+        "688",
+        1
+      ]
+    },
+    "class_type": "LatentUpscale",
+    "_meta": {
+      "title": "Upscale Latent"
+    }
+  },
+  "697": {
+    "inputs": {
+      "width": [
+        "685",
+        0
+      ],
+      "height": [
+        "685",
+        2
+      ],
+      "x": 0,
+      "y": 0,
+      "samples": [
+        "696",
+        0
+      ]
+    },
+    "class_type": "LatentCrop",
+    "_meta": {
+      "title": "Crop Latent"
+    }
+  },
+  "698": {
+    "inputs": {
+      "noise_seed": 42
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "699": {
+    "inputs": {
+      "model": [
+        "690",
+        0
+      ],
+      "conditioning": [
+        "701",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "700": {
+    "inputs": {
+      "value": "round(0.46+a*(0.72-0.46), 2)",
+      "a": [
+        "710",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "Denoise"
+    }
+  },
+  "701": {
+    "inputs": {
+      "guidance": [
+        "703",
+        1
+      ],
+      "conditioning": [
+        "725",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
+    }
+  },
+  "702": {
+    "inputs": {
+      "noise_seed": 1,
+      "noise_strength": [
+        "706",
+        1
+      ],
+      "normalize": "true",
+      "latent": [
+        "691",
+        0
+      ]
+    },
+    "class_type": "InjectLatentNoise+",
+    "_meta": {
+      "title": "Inject Latent Noise"
+    }
+  },
+  "703": {
+    "inputs": {
+      "value": "max(min(a, 5), 0)",
+      "a": [
+        "711",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "Normalization"
+    }
+  },
+  "704": {
+    "inputs": {
+      "value_1": "12+(a-0.46)*(15-12)/(0.72-0.46)",
+      "value_2": "26+(a-0.46)*(35-26)/(0.72-0.46)",
+      "a": [
+        "700",
+        1
+      ]
+    },
+    "class_type": "SimpleMathDual+",
+    "_meta": {
+      "title": "Denoise"
+    }
+  },
+  "705": {
+    "inputs": {
+      "value": "a+c*(b-a)",
+      "a": [
+        "704",
+        1
+      ],
+      "b": [
+        "704",
+        3
+      ],
+      "c": [
+        "716",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "Steps"
+    }
+  },
+  "706": {
+    "inputs": {
+      "value": "round(0.38+a*(0.52-0.38), 2)",
+      "a": [
+        "717",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "Noise strength"
+    }
+  },
+  "707": {
+    "inputs": {
+      "value": "round(0.5+a*(0.72-0.5), 2)",
+      "a": [
+        "714",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "Sigma split"
+    }
+  },
+  "708": {
+    "inputs": {
+      "denoise": [
+        "707",
+        1
+      ],
+      "sigmas": [
+        "712",
+        0
+      ]
+    },
+    "class_type": "SplitSigmasDenoise",
+    "_meta": {
+      "title": "SplitSigmasDenoise"
+    }
+  },
+  "709": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 55,
+      "denoise": 1,
+      "model": [
+        "686",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "BasicScheduler"
+    }
+  },
+  "710": {
+    "inputs": {
+      "value": 0.721,
+      "min": 0,
+      "max": 1,
+      "rounding": 0
+    },
+    "class_type": "SimpleMathSlider+",
+    "_meta": {
+      "title": "Variation over 1st pass (default 0.72)"
+    }
+  },
+  "711": {
+    "inputs": {
+      "value": 3.2
+    },
+    "class_type": "SimpleMathFloat+",
+    "_meta": {
+      "title": "Flux Guidance"
+    }
+  },
+  "712": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": [
+        "705",
+        0
+      ],
+      "denoise": [
+        "700",
+        1
+      ],
+      "model": [
+        "690",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "BasicScheduler"
+    }
+  },
+  "713": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "725",
+        0
+      ]
+    },
+    "class_type": "FluxGuidance",
+    "_meta": {
+      "title": "FluxGuidance"
+    }
+  },
+  "714": {
+    "inputs": {
+      "value": 0.5,
+      "min": 0,
+      "max": 1,
+      "rounding": 0
+    },
+    "class_type": "SimpleMathSlider+",
+    "_meta": {
+      "title": "<< rough - smooth >> (default 0.23)"
+    }
+  },
+  "716": {
+    "inputs": {
+      "value": 0.852,
+      "min": 0,
+      "max": 1,
+      "rounding": 0
+    },
+    "class_type": "SimpleMathSlider+",
+    "_meta": {
+      "title": "<< speed - accuracy >> (default 0.50)"
+    }
+  },
+  "717": {
+    "inputs": {
+      "value": 1,
+      "min": 0,
+      "max": 1,
+      "rounding": 0
+    },
+    "class_type": "SimpleMathSlider+",
+    "_meta": {
+      "title": "Noise strength (default 0.50)"
+    }
+  },
+  "719": {
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "721": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "Kasabulibaas.safetensors",
+        "strength": 1
+      },
+      "lora_2": {
+        "on": true,
+        "lora": "flux_realism_lora.safetensors",
+        "strength": 1
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "719",
+        0
+      ],
+      "clip": [
+        "680",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "725": {
+    "inputs": {
+      "text": [
+        "662",
+        0
+      ],
+      "clip": [
+        "721",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode"
+    }
+  },
+  "727": {
+    "inputs": {
+      "MODEL": [
+        "719",
+        0
+      ],
+      "CLIP": [
+        "680",
+        0
+      ],
+      "VAE": [
+        "681",
+        0
+      ]
+    },
+    "class_type": "Anything Everywhere3",
+    "_meta": {
+      "title": "Anything Everywhere3"
+    }
+  },
+  "733": {
+    "inputs": {
+      "model_name": "bbox/Eyeful_v2-Paired.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "Eyes Detector"
+    }
+  },
+  "735": {
+    "inputs": {
+      "seed": 834449433487969
+    },
+    "class_type": "Seed Everywhere",
+    "_meta": {
+      "title": "Seed Everywhere"
+    }
+  },
+  "736": {
+    "inputs": {
+      "noise_seed": [
+        "735",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "Seed from Seed Everywhere"
+    }
+  },
+  "739": {
+    "inputs": {
+      "negative": "deformed hands, extra fingers, missing fingers, fused fingers, too many fingers, mutated hands, disproportionate hands, malformed limbs, extra limbs, missing limbs, fused limbs, poorly drawn face, distorted face, mutation, mutilated, extra arms, extra legs, disfigured, deformed, cross-eyed, body out of frame, out of frame, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra digit, fewer digits, cropped, worst quality, low quality, poorly drawn feet, malformed feet, bad feet, anatomical error, disproportionate body, uneven body structure, asymmetrical body features, anatomically incorrect"
+    },
+    "class_type": "easy negative",
+    "_meta": {
+      "title": "Negative"
+    }
+  },
+  "742": {
+    "inputs": {
+      "text": [
+        "739",
+        0
+      ],
+      "clip": [
+        "680",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode"
+    }
+  },
+  "745": {
+    "inputs": {
+      "images": [
+        "695",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "746": {
+    "inputs": {
+      "images": [
+        "654",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}
