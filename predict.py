@@ -37,6 +37,7 @@ class Predictor(BasePredictor):
         os.makedirs("ComfyUI/models/loras", exist_ok=True)
         os.makedirs("ComfyUI/models/vae", exist_ok=True)
         os.makedirs("ComfyUI/models/clip", exist_ok=True)
+        os.makedirs("ComfyUI/models/unet", exist_ok=True)  # Added for flux1-dev
         os.makedirs("ComfyUI/models/bbox", exist_ok=True)
         os.makedirs("ComfyUI/models/sam", exist_ok=True)
         os.makedirs("ComfyUI/models/luts", exist_ok=True)
@@ -89,27 +90,71 @@ class Predictor(BasePredictor):
     def update_workflow(self, workflow, **kwargs):
         # Update prompt text in Jurdn's Groq API Prompt Enhancer (node 662)
         for node_id, node in workflow.items():
-            # Update prompt
-            if "class_type" in node and node["class_type"] == "JurdnsGroqAPIPromptEnhancer":
+            # Update prompt in node 662
+            if node_id == "662" and "class_type" in node and node["class_type"] == "JurdnsGroqAPIPromptEnhancer":
                 node["inputs"]["text"] = kwargs["prompt"]
                 print(f"Updated prompt in node {node_id}")
             
-            # Update negative prompt
-            if "class_type" in node and node["class_type"] == "easy negative":
-                node["inputs"]["negative"] = kwargs["negative_prompt"]
-                print(f"Updated negative prompt in node {node_id}")
-            
-            # Update seed everywhere
-            if "class_type" in node and node["class_type"] == "Seed Everywhere":
-                node["inputs"]["seed"] = kwargs["seed"]
-                print(f"Updated seed in node {node_id}")
-                
-            # Update scheduler steps (node 709)
+            # Update steps in node 709
             if node_id == "709" and "class_type" in node and node["class_type"] == "BasicScheduler":
                 node["inputs"]["steps"] = kwargs["steps"]
                 print(f"Updated steps in BasicScheduler to {kwargs['steps']}")
-                
-            # Update resolution if applicable
+            
+            # Update seed in Seed Everywhere node
+            if node_id == "735" and "class_type" in node and node["class_type"] == "Seed Everywhere":
+                node["inputs"]["seed"] = kwargs["seed"]
+                print(f"Updated seed in node {node_id} to {kwargs['seed']}")
+            
+            # Update LoRAs in node 721 if provided
+            if node_id == "721" and "class_type" in node and node["class_type"] == "Power Lora Loader (rgthree)":
+                if kwargs.get("loras"):
+                    loras = kwargs["loras"]
+                    
+                    # Always ensure at least the first two default LoRAs are properly configured
+                    if len(loras) >= 1:
+                        lora_name = loras[0]
+                        if not lora_name.endswith(".safetensors"):
+                            lora_name += ".safetensors"
+                        
+                        # Update the lora_1 field
+                        node["inputs"]["lora_1"]["on"] = True
+                        node["inputs"]["lora_1"]["lora"] = lora_name
+                        node["inputs"]["lora_1"]["strength"] = 1
+                        print(f"Updated first LoRA in node {node_id} to {lora_name}")
+                    
+                    if len(loras) >= 2:
+                        lora_name = loras[1]
+                        if not lora_name.endswith(".safetensors"):
+                            lora_name += ".safetensors"
+                        
+                        # Update the lora_2 field
+                        node["inputs"]["lora_2"]["on"] = True
+                        node["inputs"]["lora_2"]["lora"] = lora_name
+                        node["inputs"]["lora_2"]["strength"] = 1
+                        print(f"Updated second LoRA in node {node_id} to {lora_name}")
+                    
+                    # Add additional LoRAs as needed
+                    for i, lora_name in enumerate(loras[2:], start=3):
+                        if not lora_name.endswith(".safetensors"):
+                            lora_name += ".safetensors"
+                        
+                        # Add new LoRA field if it doesn't exist
+                        lora_key = f"lora_{i}"
+                        if lora_key not in node["inputs"]:
+                            node["inputs"][lora_key] = {
+                                "on": True,
+                                "lora": lora_name,
+                                "strength": 1
+                            }
+                            # Also update the "➕ Add Lora" field to trigger the UI to add a new slot
+                            node["inputs"]["➕ Add Lora"] = ""
+                        else:
+                            node["inputs"][lora_key]["on"] = True
+                            node["inputs"][lora_key]["lora"] = lora_name
+                        
+                        print(f"Added additional LoRA in node {node_id} to {lora_name}")
+            
+            # Update resolution if applicable (keeping this feature from before)
             if "_meta" in node and node["_meta"].get("title") == "Basic Image size":
                 if kwargs["resolution"] == "768x1280":
                     node["inputs"]["resolution"] = "768x1280 (0.6)"
@@ -127,9 +172,9 @@ class Predictor(BasePredictor):
             description="Text prompt for image generation",
             default="Love, at night on the beach, dancing, unity, happiness."
         ),
-        negative_prompt: str = Input(
-            description="Negative prompt to specify what not to include",
-            default="deformed hands, extra fingers, missing fingers, fused fingers, too many fingers, mutated hands, disproportionate hands"
+        loras: list = Input(
+            description="List of LoRA names to apply (with or without .safetensors extension)",
+            default=["flux_realism_lora", "Kasabulibaas"]
         ),
         resolution: str = Input(
             description="Image resolution (width x height)",
@@ -152,7 +197,7 @@ class Predictor(BasePredictor):
         # Generate a seed if not provided
         seed = seed_helper.generate(seed)
         
-        print(f"Generating image with prompt: {prompt}, steps: {steps}, seed: {seed}")
+        print(f"Generating image with prompt: {prompt}, steps: {steps}, seed: {seed}, loras: {loras}")
 
         # No input image in this workflow, but handle it if needed in the future
         image_filename = None
@@ -165,7 +210,7 @@ class Predictor(BasePredictor):
         self.update_workflow(
             workflow,
             prompt=prompt,
-            negative_prompt=negative_prompt,
+            loras=loras,
             resolution=resolution,
             steps=steps,
             seed=seed,

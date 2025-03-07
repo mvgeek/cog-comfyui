@@ -206,144 +206,21 @@
     "SD1.5/model.safetensors",
     "sigclip_vision_patch14_384.safetensors"
   ],
-  "LORAS": [
-    "3d_render_style_xl.safetensors",
-    "add-detail-xl.safetensors",
-    "aesthetic_anime_v1s.safetensors",
-    "age_slider-LECO-v1.safetensors",
-    "AnimateLCM_sd15_t2v_lora.safetensors",
-    "araminta_k/abstract-anime-painting.safetensors",
-    "araminta_k/araminta-k-illustration.safetensors",
-    "araminta_k/BandW-Manga.safetensors",
-    "araminta_k/flux_dev_frostinglane_araminta_k.safetensors",
-    "araminta_k/gemini-anime.safetensors",
-    "araminta_k/haute-couture-illustration.safetensors",
-    "araminta_k/japanese-poster-prints.safetensors",
-    "araminta_k/lost-and-lonely-manga.safetensors",
-    "araminta_k/painting-light.safetensors",
-    "araminta_k/pop-art-anime.safetensors",
-    "araminta_k/sketched-out-manga.safetensors",
-    "araminta_k/soft-ones.safetensors",
-    "araminta_k/soft-pastel-anime.safetensors",
-    "araminta_k/vincent-sketch-manga.safetensors",
-    "arcane_offset.safetensors",
-    "artificialguybr/3DRedmond-3DRenderStyle-3DRenderAF.safetensors",
-    "artificialguybr/3DRedmond15V-LiberteRedmond-3DRenderStyle-3DRenderAF.safetensors",
-    "artificialguybr/AnalogRedmond-AnalogRedmAF.safetensors",
-    "artificialguybr/AnalogRedmondV2-Analog-AnalogRedmAF.safetensors",
-    "artificialguybr/BetterTextRedmond.safetensors",
-    "artificialguybr/ClayAnimationRedm.safetensors",
-    "artificialguybr/ClayAnimationRedmond15-ClayAnimation-Clay.safetensors",
-    "artificialguybr/ColoringBookRedmond-ColoringBook-ColoringBookAF.safetensors",
-    "artificialguybr/ColoringBookRedmond-ColoringBookAF.safetensors",
-    "artificialguybr/ColoringBookRedmond21V-FreedomRedmond-ColoringBook-ColoringBookAF.safetensors",
-    "artificialguybr/CuteCartoon15V-LiberteRedmodModel-Cartoon-CuteCartoonAF.safetensors",
-    "artificialguybr/CuteCartoonRedmond-CuteCartoon-CuteCartoonAF.safetensors",
-    "artificialguybr/CuteFruitsRedmond-CtFruitsRedmAF.safetensors",
-    "artificialguybr/FilmGrainRedmond-FilmGrain-FilmGrainAF.safetensors",
-    "artificialguybr/IconsRedmond.safetensors",
-    "artificialguybr/IconsRedmond15V-Icons.safetensors",
-    "artificialguybr/IconsRedmondV2-Icons.safetensors",
-    "artificialguybr/LineAniRedmond-LineAniAF.safetensors",
-    "artificialguybr/LineAniRedmondV2-Lineart-LineAniAF.safetensors",
-    "artificialguybr/LogoRedmond15V-LogoRedmAF-Logo.safetensors",
-    "artificialguybr/LogoRedmond_LogoRedAF.safetensors",
-    "artificialguybr/LogoRedmondV2-Logo-LogoRedmAF.safetensors",
-    "artificialguybr/MoviePosterRedmond-MoviePoster-MoviePosterRedAF.safetensors",
-    "artificialguybr/PixelArtRedmond-Lite64.safetensors",
-    "artificialguybr/PixelArtRedmond15V-PixelArt-PIXARFK.safetensors",
-    "artificialguybr/PomologicalWatercolorRedmond.safetensors",
-    "artificialguybr/PS1Redmond-PS1Game-Playstation1Graphics.safetensors",
-    "artificialguybr/StickersRedmond.safetensors",
-    "artificialguybr/StickersRedmond15Version-Stickers-Sticker.safetensors",
-    "artificialguybr/StickersRedmond21V-FreedomRedmond-Sticker-Stickers.safetensors",
-    "artificialguybr/StoryBookRedmond-KidsRedmAF.safetensors",
-    "artificialguybr/StoryBookRedmond15-KidsRedmAF-KidsBook.safetensors",
-    "artificialguybr/StorybookRedmondUnbound-KidsRedmAF.safetensors",
-    "artificialguybr/StorybookRedmondV2-KidsBook-KidsRedmAF.safetensors",
-    "artificialguybr/StudioGhibli.Redmond-StdGBRRedmAF-StudioGhibli.safetensors",
-    "artificialguybr/StudioGhibliRedmond-StdGBRedmAF.safetensors",
-    "artificialguybr/ToyRedmond-FnkRedmAF.safetensors",
-    "artificialguybr/TshirtDesignRedmond-TshirtDesignAF.safetensors",
-    "artificialguybr/TShirtDesignRedmondV2-Tshirtdesign-TshirtDesignAF.safetensors",
-    "artificialguybr/View360.safetensors",
-    "b_lora/B-LoRA-cartoon_line.safetensors",
-    "b_lora/B-LoRA-ink_sketch.safetensors",
-    "b_lora/B-LoRA-pen_sketch.safetensors",
-    "b_lora/B_LoRA_colorful-squirrel.safetensors",
-    "b_lora/B_LoRA_pencil_boy.safetensors",
-    "badquality_v02.safetensors",
-    "Canopus-LoRA-Flux-UltraRealism.safetensors",
-    "charTurnBetaLora.safetensors",
-    "COOLKIDS_MERGE_V2.5.safetensors",
-    "Cyberpunk_typeface_flux_lora_v1.safetensors",
-    "flux-RealismLora.safetensors",
-    "FLUX.1-Turbo-Alpha.safetensors",
-    "flux1-canny-dev-lora.safetensors",
-    "flux1-depth-dev-lora.safetensors",
-    "flux_turbo_v1_1.safetensors",
-    "fofr/emoji.safetensors",
-    "glowneon_xl_v1.safetensors",
-    "hands-xl-sd-15-flux1-dev.safetensors",
-    "Harrlogos_v2.0.safetensors",
-    "hd_helper_v1.safetensors",
-    "Hyper-FLUX.1-dev-16steps-lora.safetensors",
-    "Hyper-FLUX.1-dev-8steps-lora.safetensors",
-    "Hyper-SD15-12steps-CFG-lora.safetensors",
-    "Hyper-SD15-1step-lora.safetensors",
-    "Hyper-SD15-2steps-lora.safetensors",
-    "Hyper-SD15-4steps-lora.safetensors",
-    "Hyper-SD15-8steps-CFG-lora.safetensors",
-    "Hyper-SD15-8steps-lora.safetensors",
-    "Hyper-SD3-16steps-CFG-lora.safetensors",
-    "Hyper-SD3-4steps-CFG-lora.safetensors",
-    "Hyper-SD3-8steps-CFG-lora.safetensors",
-    "Hyper-SDXL-12steps-CFG-lora.safetensors",
-    "Hyper-SDXL-1step-lora.safetensors",
-    "Hyper-SDXL-2steps-lora.safetensors",
-    "Hyper-SDXL-4steps-lora.safetensors",
-    "Hyper-SDXL-8steps-CFG-lora.safetensors",
-    "Hyper-SDXL-8steps-lora.safetensors",
-    "in_context_lora/couple-profile.safetensors",
-    "in_context_lora/film-storyboard.safetensors",
-    "in_context_lora/font-design.safetensors",
-    "in_context_lora/home-decoration.safetensors",
-    "in_context_lora/portrait-illustration.safetensors",
-    "in_context_lora/portrait-photography.safetensors",
-    "in_context_lora/ppt-templates.safetensors",
-    "in_context_lora/sandstorm-visual-effect.safetensors",
-    "in_context_lora/sparklers-visual-effect.safetensors",
-    "in_context_lora/visual-identity-design.safetensors",
-    "ip-adapter-faceid-plus_sd15_lora.safetensors",
-    "ip-adapter-faceid-plusv2_sd15_lora.safetensors",
-    "ip-adapter-faceid-plusv2_sdxl_lora.safetensors",
-    "ip-adapter-faceid_sd15_lora.safetensors",
-    "ip-adapter-faceid_sdxl_lora.safetensors",
-    "lcm-lora-sdv1-5.safetensors",
-    "lcm-lora-ssd-1b.safetensors",
-    "lcm_lora_sdxl.safetensors",
-    "MODILL_XL_0.27_RC.safetensors",
-    "more_details.safetensors",
-    "PerfectEyesXL.safetensors",
-    "Polaroidv2.safetensors",
-    "RW_PS1v1.safetensors",
-    "sd_xl_offset_example-lora_1.0.safetensors",
-    "sdxl_lightning_2step_lora.pth",
-    "sdxl_lightning_2step_lora.safetensors",
-    "sdxl_lightning_4step_lora.pth",
-    "sdxl_lightning_4step_lora.safetensors",
-    "sdxl_lightning_8step_lora.pth",
-    "sdxl_lightning_8step_lora.safetensors",
-    "SDXLrender_v2.0.safetensors",
-    "SECourses_3D_Render_Style_Fixed_Dataset_With_Captions.safetensors",
-    "Segmind-VegaRT.safetensors",
-    "Sketch_Illustration_Style_LoRA_-_Pony_V6_XL.safetensors",
-    "Smooth_Anime_2_Style_SDXL_LoRA_Pony_Diffusion_V6_XL.safetensors",
-    "theovercomer8sContrastFix_sd15.safetensors",
-    "theovercomer8sContrastFix_sd21768.safetensors",
-    "Ton618-Epic-Realism-Flux-LoRA.safetensors",
-    "weight_slider-LECO-v1.safetensors"
-  ],
+  "LORAS": {
+    "flux_realism_lora.safetensors": {
+      "url": "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor",
+      "dest": "ComfyUI/models/loras"
+    },
+    "Kasabulibaas.safetensors": {
+      "url": "https://huggingface.co/mvgeek/kasab/resolve/main/Kasabulibaas.safetensors",
+      "dest": "ComfyUI/models/loras",
+      "source": "huggingface"
+    },
+    "3d_render_style_xl.safetensors": {
+      "url": "https://civitai.com/api/download/models/129934",
+      "dest": "ComfyUI/models/loras"
+    }
+  },
   "EMBEDDINGS": [
     "bad_prompt_version2-neg.pt",
     "easynegative.safetensors",
@@ -537,8 +414,16 @@
     "Kolors-IP-Adapter-Plus.bin",
     "SD3.5-Large-IP-Adapter.bin"
   ],
-  "VAE": [
-    "ae.safetensors",
+  "VAE": {
+    "vae-ft-mse-840000-ema-pruned.safetensors": {
+      "url": "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors",
+      "dest": "ComfyUI/models/vae"
+    },
+    "ae.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors",
+      "dest": "ComfyUI/models/vae",
+      "source": "huggingface"
+    },
     "cosmos_cv8x8x8_1.0.safetensors",
     "hunyuan_video_vae_bf16.safetensors",
     "mochi/mochi_preview_vae_bf16.safetensors",
@@ -547,35 +432,130 @@
     "sdxl_vae.safetensors",
     "stable-cascade/effnet_encoder.safetensors",
     "stable-cascade/stage_a.safetensors",
-    "vae-ft-mse-840000-ema-pruned.safetensors",
     "wan_2.1_vae.safetensors"
-  ],
-  "UNET": [
-    "flux1-dev.safetensors",
-    "flux1-schnell.safetensors",
-    "iclight_sd15_fbc.safetensors",
-    "iclight_sd15_fbc_unet_ldm.safetensors",
-    "iclight_sd15_fc.safetensors",
-    "iclight_sd15_fc_unet_ldm.safetensors",
-    "iclight_sd15_fcon.safetensors",
-    "kolors.fp16.safetensors",
-    "sdxl_lightning_1step_unet_x0.pth",
-    "sdxl_lightning_1step_unet_x0.safetensors",
-    "sdxl_lightning_2step_unet.pth",
-    "sdxl_lightning_2step_unet.safetensors",
-    "sdxl_lightning_4step_unet.pth",
-    "sdxl_lightning_4step_unet.safetensors",
-    "sdxl_lightning_8step_unet.pth",
-    "sdxl_lightning_8step_unet.safetensors",
-    "stable-cascade/stage_b.safetensors",
-    "stable-cascade/stage_b_bf16.safetensors",
-    "stable-cascade/stage_b_lite.safetensors",
-    "stable-cascade/stage_b_lite_bf16.safetensors",
-    "stable-cascade/stage_c.safetensors",
-    "stable-cascade/stage_c_bf16.safetensors",
-    "stable-cascade/stage_c_lite.safetensors",
-    "stable-cascade/stage_c_lite_bf16.safetensors"
-  ],
+  },
+  "UNET": {
+    "flux1-dev.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "flux1-schnell.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-schnell.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "iclight_sd15_fbc.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/iclight_sd15_fbc.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "iclight_sd15_fbc_unet_ldm.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/iclight_sd15_fbc_unet_ldm.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "iclight_sd15_fc.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/iclight_sd15_fc.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "iclight_sd15_fc_unet_ldm.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/iclight_sd15_fc_unet_ldm.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "iclight_sd15_fcon.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/iclight_sd15_fcon.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "kolors.fp16.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/kolors.fp16.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "sdxl_lightning_1step_unet_x0.pth": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/sdxl_lightning_1step_unet_x0.pth",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "sdxl_lightning_1step_unet_x0.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/sdxl_lightning_1step_unet_x0.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "sdxl_lightning_2step_unet.pth": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/sdxl_lightning_2step_unet.pth",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "sdxl_lightning_2step_unet.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/sdxl_lightning_2step_unet.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "sdxl_lightning_4step_unet.pth": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/sdxl_lightning_4step_unet.pth",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "sdxl_lightning_4step_unet.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/sdxl_lightning_4step_unet.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "sdxl_lightning_8step_unet.pth": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/sdxl_lightning_8step_unet.pth",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "sdxl_lightning_8step_unet.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/sdxl_lightning_8step_unet.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "stable-cascade/stage_b.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/stable-cascade/stage_b.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "stable-cascade/stage_b_bf16.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/stable-cascade/stage_b_bf16.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "stable-cascade/stage_b_lite.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/stable-cascade/stage_b_lite.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "stable-cascade/stage_b_lite_bf16.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/stable-cascade/stage_b_lite_bf16.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "stable-cascade/stage_c.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/stable-cascade/stage_c.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "stable-cascade/stage_c_bf16.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/stable-cascade/stage_c_bf16.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "stable-cascade/stage_c_lite.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/stable-cascade/stage_c_lite.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    },
+    "stable-cascade/stage_c_lite_bf16.safetensors": {
+      "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/stable-cascade/stage_c_lite_bf16.safetensors",
+      "dest": "ComfyUI/models/unet",
+      "source": "huggingface"
+    }
+  },
   "DIFFUSION_MODELS": [
     "Cosmos-1_0-Diffusion-7B-Text2World.safetensors",
     "Cosmos-1_0-Diffusion-7B-Video2World.safetensors",
@@ -779,13 +759,13 @@
     "llava-llama-3-8b-v1_1-transformers"
   ],
   "TENSORRT": [
-    "dreamshaperXL_lightningDPMSDE_DYN_A40-b-1-1-1-h-512-1536-1024-w-512-1536-1024.engine",
-    "flux1-dev_DYN_A100-b-1-1-1-h-512-1536-1024-w-512-1536-1024.engine",
-    "flux1-dev_DYN_H100-b-1-1-1-h-512-1536-1024-w-512-1536-1024.engine",
-    "flux1-schnell_DYN_H100-b-1-1-1-h-512-1536-1024-w-512-1536-1024.engine",
-    "sd3_medium_DYN_A100-b-1-1-1-h-512-1536-1024-w-512-1536-1024.engine",
-    "sd3_medium_DYN_A40-b-1-1-1-h-512-1536-1024-w-512-1536-1024.engine",
-    "sd3_medium_DYN_H100-b-1-1-1-h-512-1536-1024-w-512-1536-1024.engine"
+    "dreamshaperXL_lightningDPMSDE_DYN_A40-b-1-1-1-h-512-1536-1024.engine",
+    "flux1-dev_DYN_A100-b-1-1-1-h-512-1536-1024.engine",
+    "flux1-dev_DYN_H100-b-1-1-1-h-512-1536-1024.engine",
+    "flux1-schnell_DYN_H100-b-1-1-1-h-512-1536-1024.engine",
+    "sd3_medium_DYN_A100-b-1-1-1-h-512-1536-1024.engine",
+    "sd3_medium_DYN_A40-b-1-1-1-h-512-1536-1024.engine",
+    "sd3_medium_DYN_H100-b-1-1-1-h-512-1536-1024.engine"
   ],
   "DIFFUSERS": [
     "Kolors"
