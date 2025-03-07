@@ -65,3 +65,27 @@ This project builds upon:
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 - [Black Forest Labs FLUX models](https://huggingface.co/black-forest-labs/FLUX.1-dev)
 - Various custom node repositories (see `custom_nodes.json`)
+
+## Environment Setup
+
+This project requires the following environment variables to be set for downloading model weights:
+
+- `HF_TOKEN`: Hugging Face access token for downloading models from Hugging Face
+- `HF_PRIVATE_TOKEN`: Hugging Face access token with specific permissions for private model repositories
+
+You can set these environment variables before running the application:
+
+```bash
+export HF_TOKEN="your_huggingface_token"
+export HF_PRIVATE_TOKEN="your_private_huggingface_token"
+```
+
+For local development, you can create a `.env` file and load it:
+
+```bash
+# .env file
+HF_TOKEN=your_huggingface_token
+HF_PRIVATE_TOKEN=your_private_huggingface_token
+```
+
+**Important**: Never commit tokens directly in code. Always use environment variables or secure secrets management.
