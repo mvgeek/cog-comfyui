@@ -3,6 +3,9 @@ build:
   cuda: "12.1"
   system_packages:
     - ffmpeg
+    - "libgl1-mesa-glx"
+    - "libglib2.0-0"
+    - "git"
   python_version: "3.12"
   python_packages:
     - torch
@@ -22,90 +25,51 @@ build:
     - tqdm
     - psutil
     - spandrel
-    - soundfile
     - kornia>=0.7.1
     - websocket-client==1.6.3
     - diffusers>=0.31.0
-    - av
     - comfyui-frontend-package==1.10.17
-
-    # ComfyUI-AdvancedLivePortrait
-    - dill
-
-    # Inspire
-    - webcolors
-
-    # fix for pydantic issues in cog
-    # https://github.com/replicate/cog/issues/1623
-    - albumentations==1.4.3
-
-    # was-node-suite-comfyui
-    # https://github.com/WASasquatch/was-node-suite-comfyui/blob/main/requirements.txt
-    - cmake
-    - imageio
-    - joblib
-    - matplotlib
-    - pilgram
-    - scikit-learn
-    - rembg
-
-    # ComfyUI_essentials
-    - numba
-
-    # ComfyUI_FizzNodes
-    - pandas
-    - numexpr
-
-    # comfyui-reactor-node
+    
+    # For our specific model requirements
+    - ultralytics==8.0.145
+    - opencv-python-headless>=4.0.1.24
+    
+    # ComfyUI-Impact-Pack (for SAM and detailers)
+    - segment-anything
+    - piexif
+    
+    # Required for face and hand detection
     - insightface
     - onnx
 
-    # ComfyUI-Impact-Pack
-    - segment-anything
-    - piexif
-
-    # ComfyUI-Impact-Subpack
-    - ultralytics!=8.0.177
-
-    # comfyui_segment_anything
-    - timm
-
-    # comfyui_controlnet_aux
-    # https://github.com/Fannovel16/comfyui_controlnet_aux/blob/main/requirements.txt
-    - importlib_metadata
-    - opencv-python-headless>=4.0.1.24
-    - filelock
-    - numpy
-    - scikit-image
-    - python-dateutil
-    - mediapipe
-    - svglib
-    - fvcore
-    - yapf
-    - omegaconf
-    - ftfy
-    - addict
-    - yacs
-    - trimesh[easy]
-
-    # ComfyUI-KJNodes
-    - librosa
-    - color-matcher
-
-    # PuLID
-    - facexlib
-
-    # SUPIR
-    - open-clip-torch>=2.24.0
-    - pytorch-lightning>=2.2.1
-
-    # For train.py and custom loras
-    - huggingface_hub[hf-transfer]
-
-    # ComfyUI-segment-anything-2
-    - iopath
+    # fix for pydantic issues in cog
+    - albumentations==1.4.3
+    
   run:
     - curl -o /usr/local/bin/pget -L "https://github.com/replicate/pget/releases/latest/download/pget_$(uname -s)_$(uname -m)" && chmod +x /usr/local/bin/pget
     - pip install onnxruntime-gpu --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/
+    
+    # Install ComfyUI
+    - git clone https://github.com/comfyanonymous/ComfyUI.git
+    - pip install -r ComfyUI/requirements.txt
+    
+    # Install custom node packages
+    - git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack.git ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+    - cd ComfyUI/custom_nodes/ComfyUI-Impact-Pack && pip install -r requirements.txt
+    
+    - git clone https://github.com/rgthree/rgthree-comfy.git ComfyUI/custom_nodes/rgthree-comfy
+    
+    - git clone https://github.com/Jurd-X4D/ComfyUI-jurd-nodes.git ComfyUI/custom_nodes/ComfyUI-jurd-nodes
+    - pip install groq
+    
+    - git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+    
+    - git clone https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale
+    
+    - git clone https://github.com/jamesWalker55/comfyui-simple-nodes.git ComfyUI/custom_nodes/comfyui-simple-nodes
+    
+    - git clone https://github.com/TRI3D-LC/ComfyUI-Flux.git ComfyUI/custom_nodes/ComfyUI-Flux
+    
+    - git clone https://github.com/Niutonian/ProPostProduction.git ComfyUI/custom_nodes/ProPostProduction
+    
 predict: "predict.py:Predictor"
-train: "train.py:train"
